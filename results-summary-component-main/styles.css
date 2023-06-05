@@ -1,0 +1,252 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  --height: 100vh;
+}
+
+@font-face {
+  font-family: "HankenGrotesk";
+  src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format(truetype);
+}
+
+body {
+  font-family: "HankenGrotesk";
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.container {
+  height: var(--height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  background-color: transparent;
+  max-inline-size: 750px;
+  display: flex;
+  border-radius: 30px;
+  box-shadow: 4px 9px 20px 15px hsl(234, 85%, 45%, 0.05);
+  /*rgba(170, 168, 206, 0.3);*/
+}
+
+.result-card,
+.summary-card {
+  padding-inline: 40px;
+  padding-block: 40px;
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.result-card {
+  gap: 40px;
+  text-align: center;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  color: white;
+  border-radius: 30px;
+}
+
+.result-card h1 {
+  font-size: 25px;
+  font-weight: 600;
+  color: hsl(256, 58%, 75%);
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 200px;
+  height: 200px;
+  align-self: center;
+  justify-content: center;
+  border-radius: 200px;
+  background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  line-height: 1;
+}
+
+.score h2 {
+  align-self: center;
+  font-size: 75px;
+  font-weight: 700;
+}
+
+.score span {
+  color: hsl(256, 58%, 75%);
+  padding-block-start: 5px;
+}
+
+.result-comment h3 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-block-end: 15px;
+}
+
+.result-comment p {
+  font-size: 18px;
+  padding-inline: 20px;
+  color: hsl(256, 58%, 75%);
+}
+
+span {
+  display: inline-block;
+  padding-block: 15px;
+  padding-inline: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.summary-card {
+  row-gap: 20px;
+  padding-block-end: 0px;
+}
+
+.summary-card h2 {
+  font-size: 25px;
+  /* margin-block-end: 15px; */
+}
+
+.summary-card div {
+  /* background-color: aquamarine; */
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.first {
+  background-color: hsl(0, 100%, 67%, 0.05);
+}
+
+.summary-card div:nth-of-type(2) {
+  background-color: hsl(39, 100%, 56%, 0.05);
+}
+
+.summary-card div:nth-of-type(3) {
+  background-color: hsl(166, 100%, 37%, 0.05);
+}
+
+.summary-card div:nth-of-type(4) {
+  background-color: hsl(234, 85%, 45%, 0.05);
+}
+
+.continue-btn {
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: hsl(224, 30%, 27%);
+  font-size: 18px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.continue-btn:hover {
+  background-color: hsl(241, 81%, 54%);
+}
+
+.indices-text {
+  color: hsl(224, 30%, 27%);
+  font-weight: 400;
+}
+
+.indices-name-reaction {
+  color: hsl(0, 100%, 67%);
+  padding-inline-start: 0px;
+}
+
+.indices-name-memory {
+  color: hsl(39, 100%, 56%);
+  padding-inline-start: 0px;
+}
+
+.indices-name-verbal {
+  color: hsl(166, 100%, 37%);
+  padding-inline-start: 0px;
+}
+
+.indices-name-visual {
+  color: hsl(234, 85%, 45%);
+  padding-inline-start: 0px;
+}
+
+.indices-text span {
+  font-weight: 700;
+  align-self: center;
+}
+
+@media (max-width: 375px) {
+  .container {
+    height: fit-content;
+  }
+  .content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+  }
+
+  .result-card {
+    gap: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .result-comment p {
+    font-size: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .summary-card {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 630px) {
+  .container {
+    height: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+  }
+
+  .result-card {
+    gap: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .result-comment p {
+    font-size: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .summary-card {
+    margin-bottom: 40px;
+  }
+}
